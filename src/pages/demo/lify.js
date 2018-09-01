@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from 'antd'
 import './index.less'
-import 'antd/dist/antd.css'
 export default class Life extends React.Component{
 	state = {
 		count:0
