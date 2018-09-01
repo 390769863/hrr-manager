@@ -6,6 +6,7 @@ export default class Life extends React.Component{
 	state = {
 		count:0
 	}
+
 	handleAdd=()=>{
 		this.setState({
 			count:this.state.count - 1
