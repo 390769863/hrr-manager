@@ -144,13 +144,8 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-                plugins: {
-                    ['import'[{
-                        libraryName: 'antd',
-                        style: true
-                    }]]
-                 },
-              cacheDirectory: true,
+                plugins:[['import', { 'libraryName': 'antd' ,'style': true }]],
+                cacheDirectory: true,
             },
           },
             // "postcss" loader applies autoprefixer to our CSS.
@@ -189,7 +184,13 @@ module.exports = {
                         },
                     },
                     {
-                        loader: require.resolve('less-loader')
+                        loader: require.resolve('less-loader'),
+                        options: {
+                            modules:false,
+                            modifyVars:{
+                                "@primary-color":"#436EEE"
+                            }
+                        }
                     }
                 ],
             },
