@@ -17,6 +17,20 @@
       border-top:1px solid @colorA;
       .breadcrumb-title{
         text-align:center;
+        position:relative;
+        font-size:@fontC;
+        &:after{
+            width:0;
+            height:0;
+            content:"";
+            left:50%;
+            margin-left:-16px;
+            bottom:-13px;
+            border-right:16px solid transparent;
+            border-left:16px solid transparent;
+            position:absolute;
+            border-top:14px solid #fff;
+        }
       }
       .weather{
         text-align:right;
