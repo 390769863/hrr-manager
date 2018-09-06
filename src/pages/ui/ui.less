@@ -1,3 +1,4 @@
+@import "./../../resource/default";
 .card-wrap{
     margin-bottom:10px;
     Button{
@@ -11,6 +12,9 @@
     }
     .ant-alert{
         margin-bottom:10px;
+    }
+    .ant-card{
+      margin-bottom:10px;
     }
 }
 
@@ -30,4 +34,21 @@
   vertical-align: middle;
   top:0;
   text-align: left;
+}
+
+//banner
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 300px;
+  line-height: 300px;
+  background: @colorD;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide p {
+  color: #fff;
+}
+
+.slider-wrap .slick-slide{
+    height: 400px !important;
 }
