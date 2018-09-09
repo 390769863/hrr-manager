@@ -12,7 +12,9 @@ import Message from "./pages/ui/message";
 import Tab from "./pages/ui/tabs";
 import Gallery from "./pages/ui/gallery";
 import Banner from "./pages/ui/carousel";
-import LoginIn from "./pages/form/login"
+import FormLogin from "./pages/form/login"
+import Register from "./pages/form/register";
+import BasicTable from "./pages/table/basicTable";
 
 
 export default class IRouter extends React.Component{
@@ -20,6 +22,7 @@ export default class IRouter extends React.Component{
         return(
             <HashRouter>
                 <App>
+                    <Route exact path="/" component={Login}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/admin" render={()=>
                         <Admin>
@@ -32,7 +35,9 @@ export default class IRouter extends React.Component{
                                 <Route path="/admin/ui/tabs" component={Tab}/>
                                 <Route path="/admin/ui/gallery" component={Gallery}/>
                                 <Route path="/admin/ui/carousel" component={Banner}/>
-                                <Route path="/admin/form/login" component={LoginIn}/>
+                                <Route path="/admin/form/login" component={FormLogin}/>
+                                <Route path="/admin/form/reg" component={Register}/>
+                                <Route path="/admin/table/basic" component={BasicTable}/>
                                 <Route component={NoMatch}/>
                             </Switch>
                         </Admin>
