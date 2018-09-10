@@ -82,14 +82,16 @@ export default class BasicTable extends React.Component {
                 isShowLoading:false
             }
         }).then((res)=>{
-            this.setState({
-                dataSource2:res.result,
-                selectedRowKeys:[],
-                selectedRows:null,
-                pagination:Utils.pagination(res,(current)=>{
+            if(res.code==0){
+                this.setState({
+                    dataSource2:res.result,
+                    selectedRowKeys:[],
+                    selectedRows:null,
+                    pagination:Utils.pagination(res,(current)=>{
 
+                    })
                 })
-            })
+            }
         })
     }
 
