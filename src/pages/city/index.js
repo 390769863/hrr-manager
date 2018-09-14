@@ -103,7 +103,8 @@ export default class City extends React.Component {
             },
             {
                 title: '操作时间',
-                dataIndex: 'update_time'
+                dataIndex: 'update_time',
+                render:Utils.formateDate
             },
             {
                 title: '操作人',
